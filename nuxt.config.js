@@ -6,6 +6,9 @@ export default defineNuxtConfig({
   generate: {
     fallback: true
   },
+  modules: [
+    'nuxt-primevue'
+  ],
   // ? The env/runtimeConfig Property: https://v3.nuxtjs.org/guide/features/runtime-config/
   runtimeConfig: {
     // The private keys which are only available within server-side. DON’T PUBLISH SECRETS IN CLEAR TEXT TO GIT. Use environment variables instead.
@@ -75,7 +78,7 @@ export default defineNuxtConfig({
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxt/content', '@vite-pwa/nuxt', '@nuxtjs/color-mode', '@nuxtjs/tailwindcss', 'nuxt-svgo' ],
+  modules: ['@nuxt/content', '@vite-pwa/nuxt', '@nuxtjs/color-mode', '@nuxtjs/tailwindcss', 'nuxt-svgo'],
   /*
    ** Build configuration
    */
