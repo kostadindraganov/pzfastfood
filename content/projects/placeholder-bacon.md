@@ -1,7 +1,7 @@
 ---
 category: food
 title: Fast Food
-description: What is life without bacon?
+description: Fast Food
 cover: https://baconmockup.com/400/200
 gallery:
   - https://baconmockup.com/600/300
