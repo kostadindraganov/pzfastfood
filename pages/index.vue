@@ -1,10 +1,9 @@
 <template>
   <main>
-    <p v-html="data.menu"></p>
-    <!-- <ContentRenderer :value="data">
+    <ContentRenderer :value="data">
       <h1>{{ data.menu }}</h1>
-      <ContentRendererMarkdown :value="data" />
-    </ContentRenderer> -->
+      <!-- <ContentRendererMarkdown :value="data" /> -->
+    </ContentRenderer>
   </main>
 </template>
 
