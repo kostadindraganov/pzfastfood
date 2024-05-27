@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed bottom-0 left-0 m-3">
+  <div class="m-2">
     <component :is="`icon-${color}`" @click="changeColorMode" @keypress.enter="changeColorMode" title="Toggle background color" tabindex="0" />
   </div>
 </template>
@@ -59,8 +59,8 @@ export default {
 
 <style lang="pcss" scoped>
 .icon {
-  width: 44px;
-  height: 44px;
+  width: 84px;
+  height: 84px;
   background-color: var(--bg-secondary);
   border-color: var(--border-color);
   @apply relative m-0 p-2 top-0 cursor-pointer rounded border transition-all duration-200 ease-in-out;

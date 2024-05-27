@@ -6,9 +6,7 @@ export default defineNuxtConfig({
   generate: {
     fallback: true
   },
-  modules: [
-    'nuxt-primevue'
-  ],
+
   // ? The env/runtimeConfig Property: https://v3.nuxtjs.org/guide/features/runtime-config/
   runtimeConfig: {
     // The private keys which are only available within server-side. DON’T PUBLISH SECRETS IN CLEAR TEXT TO GIT. Use environment variables instead.
@@ -70,7 +68,12 @@ export default defineNuxtConfig({
   /*
    ** Global CSS
    */
-  css: ['@/assets/css/main.pcss'],
+  css: [
+   '@/assets/css/main.pcss', 
+      // '/assets/css/tailwind.css', 
+    // 'primevue/resources/primevue.css',
+    'primevue/resources/themes/aura-light-green/theme.css'
+  ],
   /*
    ** Plugins to load before mounting the App
    */
@@ -78,12 +81,24 @@ export default defineNuxtConfig({
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxt/content', '@vite-pwa/nuxt', '@nuxtjs/color-mode', '@nuxtjs/tailwindcss', 'nuxt-svgo'],
+  modules: ['@nuxt/content', '@vite-pwa/nuxt', '@nuxtjs/color-mode', '@nuxtjs/tailwindcss', 'nuxt-svgo',  'nuxt-primevue'],
+  primevue: {
+    usePrimeVue: true,
+    options: { 
+      // unstyled: false,
+      ripple: true,
+    },
+    components: {
+      include: ['Button', 'MegaMenu', 'Card', 'Avatar', 'Menubar']
+    },
+    cssLayerOrder: 'tailwind-base, primevue, tailwind-utilities'
+  },
   /*
    ** Build configuration
    */
   build: {
     extractCSS: true,
+    transpile: ['nuxt', 'primevue'],
   },
   /*
    ** Custom additions configuration
@@ -101,6 +116,7 @@ export default defineNuxtConfig({
   tailwindcss: {
     viewer: true,
     cssPath: '~/assets/css/main.pcss',
+    // cssPath: '~/assets/css/tailwind.css',
     exposeConfig: false // enables `import { theme } from '#tailwind.config'`
   },
   colorMode: {
