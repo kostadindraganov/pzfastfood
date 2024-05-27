@@ -48,6 +48,7 @@ collections:
         format: 'json'
         editor:
           preview: false
+        create: true
         fields:
           - { label: 'Menu', name: 'menu', widget: 'markdown', required: true }
   - name: 'blog'
