@@ -18,12 +18,12 @@ collections:
   - label: 'Site settings'
     name: 'site'
     files:
-      - label: 'Info'
-        name: 'info'
-        file: 'content/site/info.json'
-        format: 'json'
-        editor:
-          preview: false
+  - label: 'Info'
+    name: 'info'
+    file: 'content/site/info.json'
+    format: 'json'
+    editor:
+      preview: false
         fields:
           - { label: Site Name, name: sitename, widget: string, hint: 'This is used for the site title' }
           - {
